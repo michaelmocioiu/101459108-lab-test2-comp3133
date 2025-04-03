@@ -4,8 +4,8 @@ import { CharacterFilterComponent } from './components/characterfilter/character
 import { CharacterDetailsComponent } from './components/characterdetails/characterdetails.component';
 
 export const routes: Routes = [
-  { path: '', component: CharacterListComponent },
-  { path: 'house', component: CharacterFilterComponent},
-  { path: 'character/:id', component: CharacterDetailsComponent },
+  { path: '', component: CharacterFilterComponent},
+  { path: 'all', component: CharacterListComponent },
+  { path: 'character/:id', component: CharacterDetailsComponent, data: { prerender: false } },
   { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
