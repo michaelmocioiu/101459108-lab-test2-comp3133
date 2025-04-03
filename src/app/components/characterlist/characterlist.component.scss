@@ -1,0 +1,42 @@
+mat-card {
+    width: 200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #333;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 12%;
+    color: white;
+  }
+  
+  mat-card-header {
+    text-align: center;
+  }
+  
+  mat-card-title {
+    font-size: 1.5rem;
+  }
+  
+  mat-card-content {
+    font-size: 1rem;
+    line-height: 1.5;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .character-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px; 
+    max-width: 100%;
+  }
+  
+  mat-card img {
+    width: 100px; 
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10%;
+  }
+  

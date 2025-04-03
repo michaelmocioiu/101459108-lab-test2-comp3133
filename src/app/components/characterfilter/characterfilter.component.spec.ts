@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CharacterfilterComponent } from './characterfilter.component';
+import { CharacterFilterComponent } from './characterfilter.component';
 
 describe('CharacterfilterComponent', () => {
-  let component: CharacterfilterComponent;
-  let fixture: ComponentFixture<CharacterfilterComponent>;
+  let component: CharacterFilterComponent;
+  let fixture: ComponentFixture<CharacterFilterComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CharacterfilterComponent]
+      imports: [CharacterFilterComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(CharacterfilterComponent);
+    fixture = TestBed.createComponent(CharacterFilterComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

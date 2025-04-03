@@ -1,1 +1,23 @@
-<p>characterdetails works!</p>
+<h1 style="text-align: center">Character Details</h1>
+<div class="detailcard" *ngIf="character; else noCharacter">
+  <div class="infobox">
+    <img [src]="character.image" alt="{{ character.name }}" />
+    <h1>{{ character.name }}</h1>
+  </div>
+    <div class="infobox">
+      <p><strong>House:</strong> {{ character.house }}</p>
+      <p><strong>Species:</strong> {{ character.species }}</p>
+      <p><strong>Wizard:</strong> {{ character.wizard ? 'Yes' : 'No' }}</p>
+      <p><strong>Ancestry:</strong> {{ character.ancestry }}</p>
+      <p><strong>Actor:</strong> {{ character.actor }}</p>
+    
+      <h3>Wand Details:</h3>
+      <p><strong>Wood:</strong> {{ character.wand.wood }}</p>
+      <p><strong>Core:</strong> {{ character.wand.core }}</p>
+      <p><strong>Length:</strong> {{ character.wand.length }}</p>
+    </div>
+  </div>
+  
+  <ng-template #noCharacter>
+    <p>Character data is loading or not available.</p>
+  </ng-template>
