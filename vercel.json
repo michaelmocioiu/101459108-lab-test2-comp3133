@@ -1,19 +1,18 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "angular.json",
-        "use": "@vercel/static-build",
-        "config": {
-          "distDir": "dist"
-        }
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/character/:id",
+      "dest": "/character/:id",
+      "prerender": {
+        "getPrerenderParams": "/app/getCharacterParams"
       }
-    ],
-    "routes": [
-      {
-        "src": "/character/:id",
-        "status": 404
-      }
-    ]
-  }
-  
+    }
+  ]
+}
